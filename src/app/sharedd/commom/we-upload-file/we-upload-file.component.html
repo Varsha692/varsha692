@@ -1,0 +1,7 @@
+<label *ngIf="label" [for]="label" class="we-form-label">{{label}}</label>
+<label [for]="label" class="we-form-label" *ngIf="inputRequired" class="we-mandatory-field">&nbsp; *</label>
+<div class="input-group">
+  <input class="we-input-style" [type]="type" class="form-control" [accept]="accept" id="label"
+    [readonly]="inputDisabled" [required]="inputRequired"
+    min="0" oninput="this.value = this.value">
+</div>

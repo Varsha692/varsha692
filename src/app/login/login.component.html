@@ -1,0 +1,94 @@
+<!-- <h4>Login Page</h4> -->
+
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+<h3 style="color:white ;">FACEBOOK</h3>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+       
+        <li class="nav-item dropdown">
+          
+          <!-- <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul> -->
+        </li>
+       
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+
+<div align="center">
+
+<div class="card" >
+
+  <div class="card-header ">
+    Login Page
+  </div>
+
+  <div class="card-body">
+   
+
+<form [formGroup]="loginForm" (ngSubmit)="postData();">
+    <div class="row1">
+    <div class="col-md-9">
+
+
+      <label for="exampleInputEmail1" class="we-form-label"  >User Id</label>
+      <label class="we-form-label1" >&nbsp; *</label>
+
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="emailAddr">
+    
+    <span *ngIf="loginForm.controls['emailAddr'].touched && loginForm.controls['emailAddr'].hasError('required')">Enter Email Address</span>
+    <span *ngIf="loginForm.controls['emailAddr'].touched && loginForm.controls['emailAddr'].hasError('email')">Enter valid Email Address</span>
+    <span *ngIf="loginForm.controls['emailAddr'].touched && loginForm.controls['emailAddr'].hasError('minLength')">Minimun 5 Character Required</span>
+    </div>
+    </div>
+    <div class="row1 col-md-9">
+      
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <label class="we-form-label1" >&nbsp; * </label>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="quantity">
+      <!-- <span *ngIf="loginForm.get('quantity').touched && loginForm.get('quantity').hasError('required')">Enter password</span> -->
+    
+    </div>
+  
+    <div class="row1 col-12">
+     
+
+    <div class="row1 col-12">
+    <button type="submit" class="btn btn-primary" (click)="submit();"[disabled]="!loginForm.valid">Sign in</button> &nbsp;
+    
+    <button type="submit" class="btn btn-secondary " (click)="data();">Register Here</button>
+    </div>
+</div>
+<!-- <app-content-projection>this is from the app component</app-content-projection>
+<p role>2nd type of use of ng content</p>
+ 
+
+<ng-template #admin>
+  this for 3r concept of ng content
+</ng-template>
+
+
+<app-content-projection>
+  <strong class="app">Senior Developer</strong>
+  <strong class="app1">Experience : 5 years</strong>
+</app-content-projection> -->
+
+
+
+  </form>
+</div>
+</div>
+  
+</div>

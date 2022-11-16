@@ -1,0 +1,48 @@
+input.ng-touched.ng-invalid{
+
+    border: 1px solid red;
+}
+
+.card{
+    margin: 15px 0 10px 0;
+ 
+    padding: 5px 5px 5px 10px;
+
+    width: 500px;
+
+}
+.we-form-label1{
+    color: red;
+}
+
+.row1{
+    /* display: inline-flex;
+     
+    justify-content: space-between;
+ 
+    align-items: center;
+ 
+    position: relative;
+ 
+    width: 10%;
+ 
+    background-color: #F0F0F0;
+ 
+    border-radius: 5px;
+ 
+    box-shadow: 1px 1px grey; */
+ 
+    margin: 15px 0 10px 0;
+ 
+    padding: 5px 5px 5px 10px;
+    
+        margin-top: 20px; 
+    
+} 
+
+.card-header{
+    background-color: #336699;
+}
+
+
+

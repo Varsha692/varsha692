@@ -1,0 +1,21 @@
+<form [formGroup]="parentForm">
+
+  <div class="col-md-4">
+    <label for="inputFirstName" class="form-label"> {{labelName}}</label>
+    <label class="we-form-label1" style="color:red ;">&nbsp; *</label> 
+    <input type="text" class="form-control"  [placeholder]="placeholder"   aria-label=" name" [formControlName]="control ? control : null">
+  </div>
+ <br>
+
+ <!-- no need for child parent communication bcoz above we have used common code for all input so no need to write   input field again and again -->
+  <!-- <div class="col-md-4">
+    <label for="inputFirstName" class="form-label"> Address</label>
+    <input type="text" class="form-control"  placeholder="Address"   aria-label=" address" [formControlName]="controll ? controll : null">
+  </div> -->
+
+  <br>
+  <!-- <div class="col-md-4">
+    <label for="inputFirstName" class="form-label">Pincode</label>
+    <input type="number" class="form-control"  placeholder="Pincode"   aria-label=" pincode" [formControlName]="controlll ? controlll : null">
+  </div> -->
+</form>

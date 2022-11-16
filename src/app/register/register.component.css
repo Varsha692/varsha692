@@ -1,0 +1,33 @@
+input.ng-touched.ng-invalid{
+
+    border: 1px solid red;
+}
+
+.we-form-label1{
+    color:red;
+}
+
+
+.varsha{
+    margin: 15px 0 10px 0;
+ 
+    padding: 5px 5px 5px 10px;
+}
+.row{
+    margin-top: 20px;
+}
+.header{
+    margin-bottom: 30px;
+}
+.row{
+    margin: 15px 0 10px 0;
+ 
+    padding: 5px 5px 5px 10px;
+ 
+} 
+
+btn-add{
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(0,0,0, 0.4);
+}

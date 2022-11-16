@@ -1,0 +1,19 @@
+    
+<form [formGroup]="parentForm ">
+  <label [for]="labelName" class="we-form-label">{{labelName}}</label>
+  <label [for]="labelName" class="we-form-label"  class="we-mandatory-field">&nbsp; *</label>
+  <br>
+  <div class="form-check form-check-inline" *ngFor="let data of dataArray" style="padding-top: 10px;">
+    <input class="form-check-input"  type="radio"  [formControlName]="control ? control : ''"
+      [value]="data.name" checked
+        (change)="selectRadio(data)">
+
+    <label class="form-check-label we-form-label" for="exampleRadios1">
+      {{data.name}}
+    </label>
+  </div>
+</form>
+
+
+
+

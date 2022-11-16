@@ -1,0 +1,230 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <h2 style="color:white ;">Register Here</h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+
+        </li>
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<form [formGroup]="registerForm" (ngSubmit)="submit">
+  <div class="row">
+
+    <app-we-input [parentForm]="registerForm" [control]="'name'" [placeholder]="'name'" [labelName]="' Name'">
+    </app-we-input>
+
+    <app-we-input [parentForm]="registerForm" [control]="'address'" [placeholder]="'address'" [labelName]="'Address'" >
+    </app-we-input >
+
+    <app-we-input [parentForm]="registerForm" [control]="'pincode'" [placeholder]="'pincode'" [labelName]="' Pincode'">
+    </app-we-input>
+
+    <!-- <div class="col-md-4">we
+      <label for="inputFirstName" class="form-label"> Name</label>
+      <label class="we-form-label1" style="color:red ;">&nbsp; *</label> 
+      <input type="text" class="form-control"  placeholder=" Name"   aria-label=" name" formControlName="name">
+      <input type="text" class="form-control"  placeholder=" Name" #value  aria-label=" name" formControlName="name"> 
+
+      <span *ngIf="registerForm.controls['name'].touched && registerForm.controls['name'].hasError('name')">EnterName</span>
+    </div> -->
+
+
+     
+    <!-- <app-we-input [test] =" "placeholder="Name" formControlName="name"  parentForm="registerForm"> </app-we-input> -->
+   
+   
+    <div class="col-md-4">
+      <label for="inputLastName" class="form-label">Date Of Birth</label>
+      <label class="we-form-label1">&nbsp; *</label>
+      <input type="date" class="form-control" placeholder="Date Of Birth" aria-label="Last name"
+        formControlName="birthdate">
+      <span
+        *ngIf="registerForm.controls['birthdate'].touched && registerForm.controls['birthdate'].hasError('birthdate')">Enter
+        Birthday</span>
+    </div>
+  </div>
+
+  <!-- <app-test-child [test]="value.value"></app-test-child> -->
+  <!-- <p>{{uname}}</p> -->
+  <!-- <app-test-child [test]="=uname"></app-test-child> -->
+ 
+ 
+ 
+  <div class="row">
+    <div class="col-md-4">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" formControlName="quantity1">
+      <span
+        *ngIf="registerForm.controls['quantity1'].touched && registerForm.controls['quantity1'].hasError('required')">Enter
+        password Address</span>
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputPassword4" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="inputPassword4" formControlName="quantity2">
+      <span
+        *ngIf="registerForm.controls['quantity2'].touched && registerForm.controls['quantity2'].hasError('required')">Confirmed
+        Password</span>
+    </div>
+  </div><br>
+
+
+
+
+  <!-- ******form array using reactive form****** -->
+
+
+  <!-- <div class="row">
+    <div class="col-md-4 ">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <label class="we-form-label1">&nbsp; *</label>
+
+      <input type="email" class="form-control" placeholder="Email" id="inputEmail4" aria-label="Email"
+        formControlName="emailAddr1">
+      <span *ngIf="registerForm.controls['emailAddr1'].touched && registerForm.controls['emailAddr1'].hasError('required')">Enter  Email Address</span>
+      <span *ngIf="registerForm.controls['emailAddr1'].touched && registerForm.controls['emailAddr1'].hasError('email')">Enter valid Email Address</span>
+      <span *ngIf="registerForm.controls['emailAddr1'].touched && registerForm.controls['emailAddr1'].hasError('minLength')">Minimun 5 Character Required</span>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-md-4">
+      <button class="btn btn-light btn-sm mt-3" (click)="addEmail()">+Add</button>
+      <div formArrayName="email">
+        <div *ngFor="let control of formarray.controls let i= index;">
+          <div class="row">
+            <div class="col-lg-11" formGroupName="{{i}}">
+              <label>Email</label>
+              <label class="we-form-label1">&nbsp; *</label>
+              <input type="email" class="form-control" formControlName="emailAddr1">
+            </div>
+            <div class="col-lg-1">
+              <button class="btn btn-light btn-sm mt-3 btn-add" (click)="removeEmail(i)">-Remove</button>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-4">
+      <button class="btn btn-light btn-sm mt-3" (click)="addNumber()">+Add</button>
+      <div formArrayName="phoneNo">
+        <div *ngFor="let control of frmarr.controls let i = index;">
+          <div class="row">
+            <div class="col-lg-11" formGroupName="{{i}}">
+              <label>Phone Number:</label>
+              <label class="we-form-label1">&nbsp; *</label>
+              <input type="number" class="form-control" formControlName="phone">
+            </div>
+            <div class="col-lg-1">
+              <button class="btn btn-light btn-sm mt-3 btn-add" (click)="removeNumber(i)">-Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group col-md-4">
+    <app-we-radio-button [parentForm]="registerForm" [control]="'gender'"
+      [labelName]="'Gender'" 
+      [dataArray]="gendersList" (selectRadioButton)="selectGenderCategory()"  >
+    </app-we-radio-button>
+  </div>
+
+ 
+ <!-- *********gender using for loop and reactive form********** -->
+
+  <!-- <div *ngFor="let gender of gendersList">
+    <input type="radio"  name="genderOfTheUser" value="{{gender.value}}" (change)="radioChangeHandler($event)" formControlName="gender" >
+    <i>{{gender.name}}</i>
+  </div>
+  <p><span>You Selected : </span><b>{{selectedGender}}</b></p> -->
+
+
+
+
+
+
+  <!--*************** 3 radio button using reactive form*********** -->
+  <!-- <fieldset class="row ">
+    <legend class="col-form-label col-sm-1 pt-0">Gender </legend>
+    <div *ngFor="let gender of genders"   class="col-sm-10"> -->
+
+  <!-- <input class="form-check-input" type="radio"  id="gridRadios1" value="Male"
+     (click)="select('Male')" formControlName="gender" >
+      <label class="form-check-label" for="gridRadios1">
+        Male
+      </label>&nbsp; -->
+
+  <!-- <input class="form-check-input" type="radio"  id="gridRadios2" value="Female" 
+      (click)="select('Female')" formControlName="gender">
+      <label class="form-check-label" for="gridRadios2">
+        Female
+      </label> &nbsp;
+    
+      <input class="form-check-input" type="radio"  id="gridRadios3" value="Other"
+      (click)="select('Other')"  formControlName="gender">
+      <label class="form-check-label" for="gridRadios3">
+        Other
+      </label> -->
+  <!-- </div>
+
+  </fieldset>
+   -->
+  <!-- <div>{{registerForm.value.gender}}</div> -->
+  <!-- </div> -->
+  
+  
+
+
+
+  <div class=" varsha col-6">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="terms">
+      <label class="form-check-label" for="gridCheck">
+        I agree all statements in Terms of service
+      </label>
+    </div>
+  </div>
+
+  <div class="varsha col-12">
+    <button type="button" class="btn btn-primary" (click)="submit()" >Submit</button>
+    &nbsp; &nbsp;
+    <button type="button" class="btn btn-secondary " (click)="cancel()">Cancel</button>
+  </div>
+
+
+  <!-- <div>
+ 
+ <h1 class="text-center">Parent Component - Root Component</h1>
+ <p>{{childData }}</p>
+<app-test-child (notify)="parentMethod($event)"></app-test-child>
+</div> -->
+
+</form>

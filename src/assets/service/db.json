@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "dhhdgh",
+      "birthdate": "2022-09-01",
+      "emailAddr1": "aa",
+      "phoneNo": [
+        {
+          "phone": 544
+        }
+      ],
+      "quantity1": "Password@123",
+      "quantity2": "sdjkks",
+      "male": "",
+      "female": "",
+      "other": "",
+      "terms": true,
+      "id": 2
+    }
+  ]
+}

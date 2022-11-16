@@ -1,0 +1,30 @@
+
+<div class="example-full-width" [formGroup]="parentForm ">
+  <label class="we-form-label">{{placeholder}}</label>
+  <!-- <label [for]="placeholder" class="we-form-label" *ngIf="inputRequired" class="we-mandatory-field">&nbsp; *</label> -->
+  <div class="input-group mb-3">
+      <input class="form-control" type="text" placeholder="DD-MM-YYYY" [formControlName]="control ? control : null" #dp="bsDatepicker"
+          [attr.disabled]="isDisabled" (bsValueChange)="valueChange($event)" bsDatepicker class="form-control"
+          [minDate]="minDate ? minDate : null" [maxDate]="maxDate ? maxDate : null" placement="top" [bsConfig]="{
+          adaptivePosition: true,
+          dateInputFormat: 'YYYY-MM-DD',
+          containerClass: 'theme-dark-blue',
+          showWeekNumbers: false
+   }">
+     
+  </div>
+</div>
+  <!-- <div class="row">
+    <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+      <input type="text"
+             placeholder="Datepicker"
+             class="form-control"
+             bsDatepicker>
+    </div>
+    <div class="col-xs-12 col-12 col-md-4 form-group mb-3">
+      <input type="text"
+             placeholder="Daterangepicker"
+             class="form-control"
+             bsDaterangepicker>
+    </div>
+  </div> -->

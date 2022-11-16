@@ -1,0 +1,27 @@
+export class User {
+    // themeName: any;
+    constructor(
+        
+        public firstName: string,
+        public lastName: string,
+        public emailId: string,
+        public phoneNumber: string,
+       
+        public password: string,
+        public date: String
+       
+       
+    ) { }
+
+    
+
+// export class UnlockUserDTO {
+//     constructor(public userId:string,
+//         public newPassword:string,
+//         public confirmPassword:string)
+//     {
+
+//     }
+// }
+    
+}
