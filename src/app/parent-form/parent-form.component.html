@@ -15,82 +15,87 @@
 </nav>
 
 <div align="center">
-
   <div class="card">
-
     <div class="card-header ">
       User Form
     </div>
 
-    <div class="card-body">
+<!-- <div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div> -->
 
-      <form [formGroup]="detailForm">
-        <div class="card-body">
-          <div class="row">
-            <div class="form-group col-md-6">
-              <app-we-input [parentForm]="detailForm" [control]="'name'" [placeholder]="'Name'" [labelName]="' Name'">
-              </app-we-input>
-            </div>
-            <div class="form-group col-md-6">
-              <app-we-input [parentForm]="detailForm" [control]="'lastName'" [placeholder]="'Last Name'"
-                [labelName]="' Last Name'">
-              </app-we-input>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-md-6">
-              <app-we-input [placeholder]="'Email'" [parentForm]="detailForm" [control]="'email'"
-                [labelName]="'Email '">
-              </app-we-input>
-            </div>
-            <div class="form-group col-md-6">
-              <app-we-input [placeholder]="'Phone Number'" [parentForm]="detailForm" [control]="'phoneNumber'"
-                [labelName]="'Phone'" [minimumLength]="9" [maximumLength]="9">
-              </app-we-input>
-            </div>
-          </div>
+  <div class="card-body">
 
-          <div class="row">
-            <div class="form-group col-md-6">
-              <app-we-input [placeholder]="'Password'" [parentForm]="detailForm" [control]="'password'"
-                [labelName]="'Password'">
-              </app-we-input>
-            </div>
-            <div class="form-group col-md-6">
-              <app-we-date [placeholder]="'Date'" [parentForm]="detailForm" [control]="'birth'" [bsValue]="bsValue"
-                [minDate]="todayDate"></app-we-date>
-            </div>
+    <form [formGroup]="detailForm">
+      <div class="container text-center">
+        <div class="row">
+          <div class="form-group col-md-12">
+            <app-we-input [parentForm]="detailForm" [control]="'name'" [placeholder]="'Name'" [labelName]="' Name'">
+            </app-we-input>
           </div>
+          <div class="form-group col-md-12">
+            <app-we-input [parentForm]="detailForm" [control]="'lastName'" [placeholder]="'Last Name'"
+              [labelName]="' Last Name'">
+            </app-we-input>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <app-we-input [placeholder]="'Email'" [parentForm]="detailForm" [control]="'email'" [labelName]="'Email '">
+            </app-we-input>
+          </div>
+          <div class="form-group col-md-12">
+            <app-we-input [placeholder]="'Phone Number'" [parentForm]="detailForm" [control]="'phoneNumber'"
+              [labelName]="'Phone'" [minimumLength]="9" [maximumLength]="9">
+            </app-we-input>
+          </div>
+        </div>
 
-          <div class="row">
-            <div class="form-group col-md-6">
-              <app-we-upload-file [label]="'Theme File'" (onChange)="onFileChange($event)" type='file' accept=".html"
-                id="getFile" [inputRequired]="true">
-              </app-we-upload-file>
-            </div>
-            <div class="form-group col-md-6">
-              <!-- <app-we-select [dataArray]="userBranchList" [parentForm]="detailForm" [control]="'homeBranch'"
+        <div class="row">
+          <div class="form-group col-md-12">
+            <app-we-input [placeholder]="'Password'" [parentForm]="detailForm" [control]="'password'"
+              [labelName]="'Password'">
+            </app-we-input>
+          </div>
+          <div class="form-group col-md-4">
+            <app-we-date [placeholder]="'Date'" [parentForm]="detailForm" [control]="'birth'" [bsValue]="bsValue"
+              [minDate]="todayDate"></app-we-date>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-4">
+            <app-we-upload-file [label]="'Theme File'" (onChange)="onFileChange($event)" type='file' accept=".html"
+              id="getFile" [inputRequired]="true">
+            </app-we-upload-file>
+          </div>
+          <div class="form-group col-md-12">
+            <!-- <app-we-select [dataArray]="userBranchList" [parentForm]="detailForm" [control]="'homeBranch'"
         [label]="'Home Branch'"></app-we-select> -->
 
-        
-          <!-- <we-select *ngIf="roleTypeList" [parentForm]="detailForm" [control]="'roleType'"
+            <!-- <we-select *ngIf="roleTypeList" [parentForm]="detailForm" [control]="'roleType'"
               [inputRequired]="true" [label]="'Role Type'" [dataArray]="roleTypeList" [label]=""
               style="max-width: 50px;" (onSelect)="selectRoleType($event.target)">
           </we-select>
        -->
-            </div>
           </div>
         </div>
-      </form>
-    </div>
-
-    <div class="row">
-      <div class="varsha col-lg-4">
-        <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
-        &nbsp; &nbsp;
-        <button type="button" class="btn btn-secondary " (click)="cancel()">Cancel</button>
       </div>
-    </div>
+    </form>
+  </div>
 
+  <div class="row">
+    <div class="varsha col-lg-4">
+      <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+      &nbsp; &nbsp;
+      <button type="button" class="btn btn-secondary " (click)="cancel()">Cancel</button>
+    </div>
+  </div>
   </div>
 </div>
+
+
+  <!-- <div class="card-footer text-muted">
+  </div>
+</div> -->
