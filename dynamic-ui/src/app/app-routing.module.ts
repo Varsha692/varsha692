@@ -4,6 +4,7 @@ import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { CurdOperationComponent } from './curd-operation/curd-operation.component'
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ParentFormComponent } from './parent-form/parent-form.component';
 import { RegisterComponent } from './register/register.component';
@@ -18,8 +19,10 @@ import { WeRadioButtonComponent } from './we-radio-button/we-radio-button.compon
 
 const routes: Routes = [
   
-  {path:'', redirectTo:'login', pathMatch:'full'},
+  // {path:'', redirectTo:'login', pathMatch:'full'},
+  {path:'', redirectTo:'home',pathMatch:'full'},
   {path:'login', component:LoginComponent},
+  {path:'home', component:HomeComponent},
   {path:'register', component:RegisterComponent},
   {path:'we-input', component:WeInputComponent},
   {path:'we-radio-button', component: WeRadioButtonComponent},

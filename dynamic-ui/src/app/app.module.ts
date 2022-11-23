@@ -23,6 +23,7 @@ import { WeDateComponent } from './sharedd/commom/we-date/we-date.component';
 import { WeUploadFileComponent } from './sharedd/commom/we-upload-file/we-upload-file.component';
 import { WeSelectComponent } from './sharedd/commom/we-select/we-select.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -48,7 +49,8 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
         ParentFormComponent,
         WeDateComponent,
         WeUploadFileComponent,
-        WeSelectComponent
+        WeSelectComponent,
+        HomeComponent,
      
        
    
